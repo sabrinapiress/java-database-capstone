@@ -1,7 +1,7 @@
 # User Story
 
 ---
-# Administrador
+## Histórias de Usuários - Administradores
 
 **Title:** Administrador - Login no portal
 _Como administrador, eu quero fazer login no portal com nome de usuário e senha, e então gerenciar a plataforma com segurança_
@@ -70,7 +70,7 @@ _Como administrador, eu quero executar procedimento armazenado na CLI do MySQL, 
 
 #
 
-# Paciente
+## Histórias de Usuários - Paciente
 
 **Title:** Paciente - Visualizar lista de médicos sem login  
 _Como paciente, quero ver uma lista de médicos disponíveis sem fazer login, para que eu possa explorar as opções antes de me registrar._
@@ -147,7 +147,7 @@ _Como paciente, desejo marcar uma consulta de uma hora com um médico, para pode
 
 #
 
-# Médico
+## Histórias de Usuários - Médico
 
 **Title:** Médico - Definir disponibilidade  
 _Como médico, quero definir meus horários disponíveis para que os pacientes possam marcar consultas de acordo._
@@ -162,7 +162,7 @@ _Como médico, quero definir meus horários disponíveis para que os pacientes p
 **Notes:**
 - Deve haver verificação de conflitos com consultas já agendadas.
 
-# Histórias de Usuário - Médico
+---
 
 **Title:** Médico - Login no portal  
 _Como médico, quero fazer login no portal, para poder gerenciar meus compromissos._
@@ -252,4 +252,4 @@ _Como médico, quero ver detalhes do paciente para consultas futuras, para que e
 **Notes:**  
 - Deve haver controle de acesso seguro aos dados.
 
-
+---
