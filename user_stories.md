@@ -1,255 +1,211 @@
 # User Story
-
----
-## Histórias de Usuários - Administradores
-
-**Title:** Administrador - Login no portal
-_Como administrador, eu quero fazer login no portal com nome de usuário e senha, e então gerenciar a plataforma com segurança_
-**Acceptance Criteria:**
-1. O administrador pode inserir nome de usuário e senha válidos.
-2. O sistema valida as credenciais e permite o acesso.
-3. O administrador é redirecionado para o painel principal após login bem-sucedido.
-**Priority:** Alta
-**Story Points:** 3
-**Notes:**
-- Deve haver tratamento de erros para login inválido.
-
 ---
 
-**Title:** Administrador - Logout do portal
-_Como administrador, eu quero sair do portal, e então proteger o acesso ao sistema_
-**Acceptance Criteria:**
-1. O administrador pode clicar em 'Sair' no menu.
-2. O sistema encerra a sessão atual.
-3. O administrador é redirecionado para a tela de login.
-**Priority:** Alta
-**Story Points:** 2
-**Notes:**
-- Sessões devem expirar automaticamente após inatividade.
+## User Stories - Administrators
 
----
-
-**Title:** Administrador - Adicionar médicos
-_Como administrador, eu quero adicionar médicos ao portal, e então permitir que médicos utilizem o sistema_
-**Acceptance Criteria:**
-1. O administrador pode preencher dados do médico.
-2. O sistema valida e salva os dados.
-3. O novo médico aparece na lista de usuários.
-**Priority:** Alta
-**Story Points:** 4
-**Notes:**
-- Deve haver verificação de duplicidade de e-mail.
-
----
-
-**Title:** Administrador - Excluir perfil de médico
-_Como administrador, eu quero excluir perfil de médico do portal, e então remover acesso de médicos inativos_
-**Acceptance Criteria:**
-1. O administrador pode selecionar um médico e clicar em 'Excluir'.
-2. O sistema solicita confirmação.
-3. O perfil é removido da base de dados.
-**Priority:** Média
-**Story Points:** 3
-**Notes:**
-- Perfis excluídos devem ser arquivados antes da remoção.
-
----
-
-**Title:** Administrador - Executar procedimento MySQL
-_Como administrador, eu quero executar procedimento armazenado na CLI do MySQL, e então obter número de compromissos por mês e acompanhar estatísticas_
-**Acceptance Criteria:**
-1. O administrador acessa a CLI do MySQL.
-2. Executa o procedimento armazenado com sucesso.
-3. Recebe os dados estatísticos mensais de compromissos.
-**Priority:** Alta
-**Story Points:** 5
-**Notes:**
-- Procedimento deve estar documentado e seguro.
-
----
-
-#
-
-## Histórias de Usuários - Paciente
-
-**Title:** Paciente - Visualizar lista de médicos sem login  
-_Como paciente, quero ver uma lista de médicos disponíveis sem fazer login, para que eu possa explorar as opções antes de me registrar._
-
-**Acceptance Criteria:**
-1. O sistema exibe uma lista de médicos disponíveis sem exigir login.
-2. A lista inclui especialidade, nome e disponibilidade.
-3. O paciente pode clicar para ver mais detalhes do médico.
-
-**Priority:** Média  
-**Story Points:** 3  
-**Notes:**
-- A lista deve ser atualizada automaticamente com base na disponibilidade.
-
----
-
-**Title:** Paciente - Cadastro com e-mail e senha  
-_Como paciente, desejo me cadastrar usando meu e-mail e senha para poder agendar consultas._
-
-**Acceptance Criteria:**
-1. O paciente pode preencher um formulário de cadastro com e-mail e senha.
-2. O sistema valida os dados e cria uma conta.
-3. O paciente recebe confirmação de cadastro.
-
-**Priority:** Alta  
-**Story Points:** 5  
-**Notes:**
-- Deve haver verificação de duplicidade de e-mail.
-
----
-
-**Title:** Paciente - Login no portal para gerenciar reservas  
-_Como paciente, desejo fazer login no portal para poder gerenciar minhas reservas._
-
-**Acceptance Criteria:**
-1. O paciente pode acessar o portal com e-mail e senha.
-2. O sistema exibe as consultas agendadas.
-3. O paciente pode cancelar ou reagendar consultas.
-
-**Priority:** Alta  
-**Story Points:** 5  
-**Notes:**
-- Sessão deve expirar após inatividade.
-
----
-
-**Title:** Paciente - Logout do portal  
-_Como paciente, desejo sair do portal para poder proteger minha conta._
-
-**Acceptance Criteria:**
-1. O paciente pode clicar em “Sair” para encerrar a sessão.
-2. O sistema redireciona para a página inicial.
-3. A sessão é encerrada com segurança.
-
-**Priority:** Média  
-**Story Points:** 2  
-**Notes:**
-- Deve haver confirmação visual de logout.
-
----
-
-**Title:** Paciente - Marcar consulta de uma hora  
-_Como paciente, desejo marcar uma consulta de uma hora com um médico, para poder receber atendimento médico._
-
-**Acceptance Criteria:**
-1. O paciente pode selecionar médico, data e horário.
-2. O sistema verifica disponibilidade e confirma agendamento.
-3. O paciente recebe notificação da consulta marcada.
-
-**Priority:** Alta  
-**Story Points:** 5  
-**Notes:**
-- Deve haver limite de uma consulta por médico por horário.
-
-#
-
-## Histórias de Usuários - Médico
-
-**Title:** Médico - Definir disponibilidade  
-_Como médico, quero definir meus horários disponíveis para que os pacientes possam marcar consultas de acordo._
-
-**Acceptance Criteria:**
-1. O médico pode adicionar horários disponíveis.
-2. O médico pode editar ou remover horários.
-3. Os pacientes só podem agendar dentro dos horários definidos.
-
-**Priority:** Média  
-**Story Points:** 3  
-**Notes:**
-- Deve haver verificação de conflitos com consultas já agendadas.
-
----
-
-**Title:** Médico - Login no portal  
-_Como médico, quero fazer login no portal, para poder gerenciar meus compromissos._
-
-**Acceptance Criteria:**
-1. O médico pode acessar o portal com e-mail e senha válidos.
-2. O sistema valida credenciais e redireciona para o painel médico.
-3. Mensagens de erro são exibidas em caso de falha no login.
-
-**Priority:** Alta  
+**Title:** Administrator - Login to the portal  
+_As an administrator, I want to log in to the portal with username and password, and then manage the platform securely_  
+**Acceptance Criteria:**  
+1. The administrator can enter valid username and password.  
+2. The system validates the credentials and grants access.  
+3. The administrator is redirected to the main dashboard after successful login.  
+**Priority:** High  
 **Story Points:** 3  
 **Notes:**  
-- O login deve ser protegido por autenticação segura.
-
+- There should be error handling for invalid login.  
 ---
 
-**Title:** Médico - Logout do portal  
-_Como médico, quero sair do portal, para proteger meus dados._
-
-**Acceptance Criteria:**
-1. O médico pode clicar em 'Sair' para encerrar a sessão.
-2. A sessão é finalizada e o usuário é redirecionado à página inicial.
-3. Nenhum dado sensível permanece acessível após logout.
-
-**Priority:** Alta  
+**Title:** Administrator - Logout from the portal  
+_As an administrator, I want to log out from the portal, and then protect system access_  
+**Acceptance Criteria:**  
+1. The administrator can click 'Logout' in the menu.  
+2. The system ends the current session.  
+3. The administrator is redirected to the login screen.  
+**Priority:** High  
 **Story Points:** 2  
 **Notes:**  
-- O logout deve funcionar em todos os navegadores.
-
+- Sessions should expire automatically after inactivity.  
 ---
 
-**Title:** Médico - Exibir calendário de compromissos  
-_Como médico, quero ver meu calendário de compromissos, para que eu me mantenha organizado._
-
-**Acceptance Criteria:**
-1. O médico pode visualizar compromissos futuros e passados.
-2. Os compromissos são exibidos com data, hora e nome do paciente.
-3. O calendário permite navegação por mês e semana.
-
-**Priority:** Alta  
+**Title:** Administrator - Add doctors  
+_As an administrator, I want to add doctors to the portal, and then allow them to use the system_  
+**Acceptance Criteria:**  
+1. The administrator can fill in doctor data.  
+2. The system validates and saves the data.  
+3. The new doctor appears in the user list.  
+**Priority:** High  
 **Story Points:** 4  
 **Notes:**  
-- O calendário deve ser responsivo e fácil de usar.
-
+- There should be email duplication validation.  
 ---
 
-**Title:** Médico - Marcar indisponibilidade  
-_Como médico, quero marcar horários indisponíveis, para que informe aos pacientes apenas os slots disponíveis._
-
-**Acceptance Criteria:**
-1. O médico pode selecionar datas e horários como indisponíveis.
-2. Esses horários não aparecem para agendamento por pacientes.
-3. O sistema impede agendamento em horários bloqueados.
-
-**Priority:** Média  
+**Title:** Administrator - Delete doctor profile  
+_As an administrator, I want to delete a doctor's profile from the portal, and then remove access for inactive doctors_  
+**Acceptance Criteria:**  
+1. The administrator can select a doctor and click 'Delete'.  
+2. The system asks for confirmation.  
+3. The profile is removed from the database.  
+**Priority:** Medium  
 **Story Points:** 3  
 **Notes:**  
-- Deve haver confirmação visual dos horários bloqueados.
-
+- Deleted profiles should be archived before removal.  
 ---
 
-**Title:** Médico - Atualizar perfil  
-_Como médico, desejo atualizar informações de especialização e contato, para que os pacientes tenham informações atualizadas._
+**Title:** Administrator - Execute MySQL procedure  
+_As an administrator, I want to execute a stored procedure in the MySQL CLI, and then obtain the number of appointments per month and track statistics_  
+**Acceptance Criteria:**  
+1. The administrator accesses the MySQL CLI.  
+2. Executes the stored procedure successfully.  
+3. Receives monthly appointment statistics.  
+**Priority:** High  
+**Story Points:** 5  
+**Notes:**  
+- Procedure must be documented and secure.  
+---
 
-**Acceptance Criteria:**
-1. O médico pode editar especialidade, telefone e e-mail.
-2. As alterações são salvas e refletidas no perfil público.
-3. O sistema valida os campos antes de salvar.
+## User Stories - Patient
 
-**Priority:** Média  
+**Title:** Patient - View list of doctors without login  
+_As a patient, I want to see a list of available doctors without logging in, so that I can explore options before registering._  
+**Acceptance Criteria:**  
+1. The system displays a list of available doctors without requiring login.  
+2. The list includes specialty, name, and availability.  
+3. The patient can click to see more doctor details.  
+**Priority:** Medium  
 **Story Points:** 3  
 **Notes:**  
-- O perfil deve ser atualizado em tempo real.
-
+- The list should update automatically based on availability.  
 ---
 
-**Title:** Médico - Visualizar detalhes do paciente  
-_Como médico, quero ver detalhes do paciente para consultas futuras, para que esteja preparado para o atendimento._
+**Title:** Patient - Register with email and password  
+_As a patient, I want to register using my email and password so I can book appointments._  
+**Acceptance Criteria:**  
+1. The patient can fill out a registration form with email and password.  
+2. The system validates the data and creates an account.  
+3. The patient receives registration confirmation.  
+**Priority:** High  
+**Story Points:** 5  
+**Notes:**  
+- There should be email duplication validation.  
+---
 
-**Acceptance Criteria:**
-1. O médico pode acessar informações do paciente agendado.
-2. Os dados incluem histórico médico e prescrições anteriores.
-3. O acesso é restrito aos pacientes com consulta marcada.
+**Title:** Patient - Login to the portal to manage bookings  
+_As a patient, I want to log in to the portal so I can manage my bookings._  
+**Acceptance Criteria:**  
+1. The patient can access the portal with email and password.  
+2. The system displays scheduled appointments.  
+3. The patient can cancel or reschedule appointments.  
+**Priority:** High  
+**Story Points:** 5  
+**Notes:**  
+- Session should expire after inactivity.  
+---
 
-**Priority:** Alta  
+**Title:** Patient - Logout from the portal  
+_As a patient, I want to log out from the portal to protect my account._  
+**Acceptance Criteria:**  
+1. The patient can click “Logout” to end the session.  
+2. The system redirects to the home page.  
+3. The session ends securely.  
+**Priority:** Medium  
+**Story Points:** 2  
+**Notes:**  
+- There should be visual confirmation of logout.  
+---
+
+**Title:** Patient - Book a one-hour appointment  
+_As a patient, I want to book a one-hour appointment with a doctor so I can receive medical care._  
+**Acceptance Criteria:**  
+1. The patient can select doctor, date, and time.  
+2. The system checks availability and confirms booking.  
+3. The patient receives appointment notification.  
+**Priority:** High  
+**Story Points:** 5  
+**Notes:**  
+- There should be a limit of one appointment per doctor per time slot.  
+---
+
+## User Stories - Doctor
+
+**Title:** Doctor - Set availability  
+_As a doctor, I want to set my available hours so that patients can book appointments accordingly._  
+**Acceptance Criteria:**  
+1. The doctor can add available hours.  
+2. The doctor can edit or remove hours.  
+3. Patients can only book within the defined hours.  
+**Priority:** Medium  
+**Story Points:** 3  
+**Notes:**  
+- There should be conflict checking with already scheduled appointments.  
+---
+
+**Title:** Doctor - Login to the portal  
+_As a doctor, I want to log in to the portal so I can manage my appointments._  
+**Acceptance Criteria:**  
+1. The doctor can access the portal with valid email and password.  
+2. The system validates credentials and redirects to the doctor dashboard.  
+3. Error messages are displayed in case of login failure.  
+**Priority:** High  
+**Story Points:** 3  
+**Notes:**  
+- Login should be protected by secure authentication.  
+---
+
+**Title:** Doctor - Logout from the portal  
+_As a doctor, I want to log out from the portal to protect my data._  
+**Acceptance Criteria:**  
+1. The doctor can click 'Logout' to end the session.  
+2. The session ends and the user is redirected to the home page.  
+3. No sensitive data remains accessible after logout.  
+**Priority:** High  
+**Story Points:** 2  
+**Notes:**  
+- Logout should work across all browsers.  
+---
+
+**Title:** Doctor - Display appointment calendar  
+_As a doctor, I want to see my appointment calendar so I can stay organized._  
+**Acceptance Criteria:**  
+1. The doctor can view future and past appointments.  
+2. Appointments are shown with date, time, and patient name.  
+3. The calendar allows navigation by month and week.  
+**Priority:** High  
 **Story Points:** 4  
 **Notes:**  
-- Deve haver controle de acesso seguro aos dados.
-
+- The calendar should be responsive and easy to use.  
 ---
+
+**Title:** Doctor - Mark unavailability  
+_As a doctor, I want to mark unavailable times so that only available slots are shown to patients._  
+**Acceptance Criteria:**  
+1. The doctor can select dates and times as unavailable.  
+2. These times are not shown for patient booking.  
+3. The system prevents booking in blocked times.  
+**Priority:** Medium  
+**Story Points:** 3  
+**Notes:**  
+- There should be visual confirmation of blocked times.  
+---
+
+**Title:** Doctor - Update profile  
+_As a doctor, I want to update my specialty and contact information so that patients have up-to-date information._  
+**Acceptance Criteria:**  
+1. The doctor can edit specialty, phone, and email.  
+2. Changes are saved and reflected in the public profile.  
+3. The system validates fields before saving.  
+**Priority:** Medium  
+**Story Points:** 3  
+**Notes:**  
+- The profile should be updated in real-time.  
+---
+
+**Title:** Doctor - View patient details  
+_As a doctor, I want to view patient details for upcoming appointments so I can be prepared for the consultation._  
+**Acceptance Criteria:**  
+1. The doctor can access information of scheduled patients.  
+2. Data includes medical history and previous prescriptions.  
+3. Access is restricted to patients with scheduled appointments.  
+**Priority:** High  
+**Story Points:** 4  
+**Notes:**  
+- There should be secure access control to the data.  

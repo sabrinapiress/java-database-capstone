@@ -1,56 +1,56 @@
-## 🗄️ Projeto do Banco de Dados MySQL
+## MySQL Database Design
 
-### Tabela: pacientes
+### Table: patients
 - `id` INT PRIMARY KEY AUTO_INCREMENT  
-- `nome` VARCHAR(100) NOT NULL  
-- `data_nascimento` DATE NOT NULL  
+- `name` VARCHAR(100) NOT NULL  
+- `birth_date` DATE NOT NULL  
 - `email` VARCHAR(100) UNIQUE NOT NULL  
-- `telefone` VARCHAR(15)  
+- `phone` VARCHAR(15)  
 
-### Tabela: medicos
+### Table: doctors
 - `id` INT PRIMARY KEY AUTO_INCREMENT  
-- `nome` VARCHAR(100) NOT NULL  
-- `especialidade` VARCHAR(100)  
+- `name` VARCHAR(100) NOT NULL  
+- `specialty` VARCHAR(100)  
 - `email` VARCHAR(100) UNIQUE NOT NULL  
 
-### Tabela: agendamentos
+### Table: appointments
 - `id` INT PRIMARY KEY AUTO_INCREMENT  
-- `paciente_id` INT NOT NULL FOREIGN KEY REFERENCES pacientes(id)  
-- `medico_id` INT NOT NULL FOREIGN KEY REFERENCES medicos(id)  
-- `data_agendamento` DATETIME NOT NULL  
-- `status` VARCHAR(50) DEFAULT 'agendado'  
+- `patient_id` INT NOT NULL FOREIGN KEY REFERENCES patients(id)  
+- `doctor_id` INT NOT NULL FOREIGN KEY REFERENCES doctors(id)  
+- `appointment_date` DATETIME NOT NULL  
+- `status` VARCHAR(50) DEFAULT 'scheduled'  
 
-### Tabela: administradores
+### Table: administrators
 - `id` INT PRIMARY KEY AUTO_INCREMENT  
-- `usuario` VARCHAR(50) UNIQUE NOT NULL  
-- `senha_hash` VARCHAR(255) NOT NULL  
-- `papel` VARCHAR(50) NOT NULL  
+- `username` VARCHAR(50) UNIQUE NOT NULL  
+- `password_hash` VARCHAR(255) NOT NULL  
+- `role` VARCHAR(50) NOT NULL  
 
 ---
 
-## 📄 Projeto da Coleção MongoDB
+## 📄 MongoDB Collection Design
 
-### Coleção: prescricoes
+### Collection: prescriptions
 
 ```json
 {
-  "prescricao_id": "RX123456",
-  "paciente_id": 101,
-  "medico_id": 202,
-  "data_emissao": "2025-08-01T10:30:00Z",
-  "medicamentos": [
+  "prescription_id": "RX123456",
+  "patient_id": 101,
+  "doctor_id": 202,
+  "issue_date": "2025-08-01T10:30:00Z",
+  "medications": [
     {
-      "nome": "Amoxicilina",
-      "dosagem": "500mg",
-      "frequencia": "3 vezes ao dia",
-      "duracao": "7 dias"
+      "name": "Amoxicillin",
+      "dosage": "500mg",
+      "frequency": "3 times a day",
+      "duration": "7 days"
     },
     {
-      "nome": "Ibuprofeno",
-      "dosagem": "200mg",
-      "frequencia": "quando necessário",
-      "duracao": "5 dias"
+      "name": "Ibuprofen",
+      "dosage": "200mg",
+      "frequency": "as needed",
+      "duration": "5 days"
     }
   ],
-  "observacoes": "O paciente deve evitar álcool durante o tratamento."
+  "notes": "The patient should avoid alcohol during treatment."
 }

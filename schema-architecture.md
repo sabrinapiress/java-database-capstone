@@ -1,14 +1,14 @@
-## Seção 1: Resumo da arquitetura
+## Section 1: Architecture Overview
 
-Este aplicativo Spring Boot utiliza controladores tanto MVC quanto REST. Templates Thymeleaf são usados para os painéis de Admin e Médico, enquanto APIs REST atendem todos os outros módulos. O aplicativo interage com dois bancos de dados—MySQL (para dados de paciente, médico, consultas e admin) e MongoDB (para prescrições). Todos os controladores encaminham as solicitações por meio de uma camada de serviço comum, que por sua vez delega para os repositórios apropriados. MySQL utiliza entidades JPA, enquanto MongoDB utiliza modelos de documentos.
+This Spring Boot application uses both MVC and REST controllers. Thymeleaf templates are used for the Admin and Doctor dashboards, while REST APIs serve all other modules. The application interacts with two databases—MySQL (for patient, doctor, appointment, and admin data) and MongoDB (for prescriptions). All controllers route requests through a common service layer, which in turn delegates to the appropriate repositories. MySQL uses JPA entities, while MongoDB uses document models.
 
 
-## Seção 2: Fluxo de dados e controle numerado
+## Section 2: Data Flow and Numbered Control
 
-1. O usuário acessa os painéis de Admin ou de Consulta.
-2. A ação é roteada para o controlador Thymeleaf ou REST apropriado.
-3. O controlador chama a camada de serviço correspondente.
-4. A camada de serviço processa a lógica de negócios necessária.
-5. A camada de serviço interage com os repositórios JPA (MySQL) ou modelos de documentos (MongoDB).
-6. Os dados são recuperados ou atualizados nos bancos de dados conforme necessário.
-7. A resposta é enviada de volta ao usuário via template Thymeleaf ou como resposta REST.
+1. The user accesses the Admin or Appointment dashboards.
+2. The action is routed to the appropriate Thymeleaf or REST controller.
+3. The controller calls the corresponding service layer.
+4. The service layer processes the required business logic.
+5. The service layer interacts with JPA repositories (MySQL) or document models (MongoDB).
+6. Data is retrieved or updated in the databases as needed.
+7. The response is sent back to the user via Thymeleaf template or as a REST response.
